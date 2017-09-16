@@ -1,0 +1,19 @@
+{
+  "name": "redpen-js-plugin",
+  "version": "1.0.0",
+  "description": "RedPen JS plugin sample",
+  "scripts": {
+    "test": "TEST_MODE=server mocha test/**/*-test.js --timeout 15000 --reporter spec",
+    "test-with-cli": "TEST_MODE=cli  mocha test/**/*-test.js --timeout 15000 --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takahi-i/redpen-js-plugin.git"
+  },
+  "author": "takahi-i",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.5.3",
+    "sync-request": "^4.1.0"
+  }
+}
