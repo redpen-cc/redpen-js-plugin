@@ -1,0 +1,14 @@
+language: node_js
+
+jdk:
+  - oraclejdk8
+
+node_js:
+  - "node"
+  - "6"
+
+env:
+  - URL=https://github.com/redpen-cc/redpen/releases/download/redpen-1.9.0
+
+script:
+  - npm run test
