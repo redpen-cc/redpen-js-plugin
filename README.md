@@ -11,7 +11,13 @@ RedPen requires the following software.
 - Java 1.8.40 or greater
 - Node.js 6.0 or greater
 
+## Preliminary
+
+First, copy this repository with `git clone` command. Then you install the JavaScript libraries with `npm install`.
+
 ## Run Test
+
+There are two way of running tests. One is test launching RedPen server. The other is running test without the servers.
 
 ### Test with RedPen Server
 
