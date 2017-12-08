@@ -15,6 +15,6 @@
   "devDependencies": {
     "mocha": "^3.5.3",
     "sync-request": "^4.1.0",
-    "wait-for-port": "0.0.2"
+    "wait-on": "^2.0.2"
   }
 }
