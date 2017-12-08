@@ -14,13 +14,19 @@ var defulat_options = {
   }
 };
 
+var options = {
+    numRetries: 50, //Number of retries
+    retryInterval: 1000 //Milliseconds to wait between retries
+};
+
 exports.initialize = function () {
   if (process.env.TEST_MODE && process.env.TEST_MODE == "server") {
       sync('bin/redpen-server start');
       sync('sleep 1');
-      waitForPort('127.0.0.1', 9090, function(err) {
+      waitForPort('127.0.0.1', 9090, options, function(err) {
 	      if (err) { return console.error("error occurs connection server...:" + err); }
 	      console.log("succeeded to connect redpen server...");
+	      return;
 	  });
   }
 };
