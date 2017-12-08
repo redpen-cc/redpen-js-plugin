@@ -13,10 +13,15 @@ var defulat_options = {
   }
 };
 
+var options = {
+    numRetries: 50, //Number of retries
+    retryInterval: 1000 //Milliseconds to wait between retries
+};
+
 exports.initialize = function () {
   if (process.env.TEST_MODE && process.env.TEST_MODE == "server") {
-    sync('bin/redpen-server start');
-    sync('sleep 10');
+      sync('bin/redpen-server start');
+      sync('wait-on http://localhost:9090');
   }
 };
 
